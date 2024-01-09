@@ -2,30 +2,35 @@
 {% load static %}
 {% block title %}Login{% endblock title %}
 {% block main-content %}
-<div class="container">
- <div class="row my-3">
-  <div class="col-sm-6 offset-sm-3">
-   <h3>Login</h3>
-   <hr>
-   <form action="" method="post" novalidate class="shadow p-5">
-     {% csrf_token %}
-     {% for fm in form %}
-      <div class="form-group">
-      {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small> <br>
-      </div>
-     {% endfor %}
-     <small><a href="{% url 'password_reset' %}">Forgot Password ?</a></small> <br>
-     <input type="submit" class="btn btn-primary mt-4" value="Login">
-     <br>
-     <div class="text-center text-primary fw-bold"><small>New to ShoppinglyX ? <a href="{% url 'customerregistration' %}" class="text-danger">Create an Account</a> </small></div>
-		 
-     {% if form.non_field_errors %}
-      {% for error in form.non_field_errors %}
-       <p class="alert alert-danger my-3">{{error}}</p>
-      {% endfor %}
-     {% endif %}
-    </form>
-  </div>
- </div>
+
+  <body style="background: url('{% static 'app/images/banner/b1.jpeg' %}') no-repeat center center fixed; background-size: cover; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+<div class="container" >
+    <div class="row my-3" >
+      <div class="col-sm-6 offset-sm-3" style="background-color: #ffffff; border-radius: 15px; padding: 20px;">
+        <h3 style="color: #; text-align: center; font-size: 2em; letter-spacing: 1px;">Login</h3>
+        <hr style="border-top: 2px solid red;">
+            <form action="" method="post" novalidate class="shadow p-5" style="background-color: white; border-radius: 15px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                {% csrf_token %}
+                {% for fm in form %}
+                <div class="form-group" style="margin-bottom: 20px;">
+                    {{fm.label_tag}} {{fm}} <small class="text-danger" style="color: #dc3545; font-size: 0.8em;">{{fm.errors|striptags}}</small> <br>
+                </div>
+                {% endfor %}
+                <small style="display: block; text-align: right;"><a href="{% url 'password_reset' %}" style="color: #007bff; text-decoration: none;">Forgot Password ?</a></small> <br>
+                <input type="submit" class="btn btn-primary mt-4" style="background-color: #007bff; color: #ffffff; cursor: pointer; border: none; padding: 10px 20px; border-radius: 5px; font-size: 1em;" value="Login">
+                <br>
+                <div class="text-center text-primary fw-bold" style="color: #007bff; margin-top: 20px; font-size: 0.9em;"><small>New to ShoppinglyX? <a href="{% url 'customerregistration' %}" style="color: #dc3545; text-decoration: none;">Create an Account</a></small></div>
+
+                {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                <p class="alert alert-danger my-3" style="background-color: #dc3545; color: #ffffff; border-radius: 10px; padding: 10px;">{{error}}</p>
+                {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+    </div>
 </div>
+
+</body>
 {% endblock main-content %}

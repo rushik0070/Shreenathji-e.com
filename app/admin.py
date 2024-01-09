@@ -5,7 +5,8 @@ from .models import (
  Customer,
  Product,
  Cart,
- OrderPlaced
+ OrderPlaced ,
+ ContactMessage ,
 )
 
 @admin.register(Customer)
@@ -20,6 +21,9 @@ class ProductModelAdmin(admin.ModelAdmin):
 class CartModelAdmin(admin.ModelAdmin):
  list_display = ['id', 'user', 'product', 'quantity']
 
+@admin.register(ContactMessage)
+class CartModelAdmin(admin.ModelAdmin):
+ list_display = ['name', 'email', 'subject', 'message']
 
 @admin.register(OrderPlaced)
 class OrderPlacedModelAdmin(admin.ModelAdmin):

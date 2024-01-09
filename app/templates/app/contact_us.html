@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Contact Us{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="card shadow p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">Get in Touch</h2>
+            {% if success_message %}
+                <div class="alert alert-success text-center" role="alert">
+                    <strong>Thank you!</strong> Your message has been received. We'll get back to you soon.
+                </div>
+            {% endif %}
+            <form method="post" action="{% url 'contact_us' %}">
+                {% csrf_token %}
+                <div class="mb-3" align="center">
+                    <label for="{{ form.name.id_for_label }}" class="form-label">Your Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="mb-3" align="center">
+                    <label for="{{ form.email.id_for_label }}" class="form-label">Your Email</label>
+                    {{ form.email }}
+                </div>
+                <div class="mb-3" align="center">
+                    <label for="{{ form.subject.id_for_label }}" class="form-label">Subject</label>
+                    {{ form.subject }}
+                </div>
+                <div class="mb-3" align="center">
+                    <label for="{{ form.message.id_for_label }}" class="form-label">Your Message</label>
+                    {{ form.message }}
+                </div>
+                <div class="text-center" align="center">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

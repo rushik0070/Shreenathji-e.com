@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
+
 STATE_CHOICES = (
   ('Andaman & Nicobar Islands','Andaman & Nicobar Islands'),
   ('Andhra Pradesh','Andhra Pradesh'),
@@ -51,6 +52,14 @@ class Customer(models.Model):
   # return self.user.username
   return str(self.id)
 
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    subject = models.CharField(max_length=200)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.subject
 
 CATEGORY_CHOICES = (
  ('G', 'gold'),
@@ -104,3 +113,4 @@ class OrderPlaced(models.Model):
  @property
  def total_cost(self):
    return self.quantity * self.product.discounted_price
+ 

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from .models import Customer, Product, Cart, OrderPlaced
-from .forms import CustomerRegistrationForm, CustomerProfileForm
+from .forms import CustomerRegistrationForm, CustomerProfileForm , ContactForm
 from django.views import View
 from django.contrib import messages
 from django.http import JsonResponse
@@ -275,3 +275,16 @@ class ProfileView(View):
 			reg.save()
 			messages.success(request, 'Congratulations!! Profile Updated Successfully.')
 		return render(request, 'app/profile.html', {'form':form, 'active':'btn-primary', 'totalitem':totalitem})
+
+
+def contact_us(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # Additional logic if needed
+            return render(request, 'app/contact_us.html', {'form': ContactForm(), 'success_message': 'Thank you for reaching out! We\'ll get back to you soon.'})
+    else:
+        form = ContactForm()
+
+    return render(request, 'app/contact_us.html', {'form': form})

@@ -2,14 +2,29 @@
 {% load static %}
 {% block title %}Home{% endblock title %}
 
+{% block home %}
+
+<br>
+<section id="featured" class="hero">
+  <div class="container">
+      <h2>Discover Timeless Elegance</h2>
+      <p>Explore our curated selection of exquisite jewelry, meticulously crafted to elevate your style.</p>
+      <!-- <a href="#shop-now" class="btn">Shop Now</a> -->
+  </div>
+</section>
+<br>
+
+{% endblock home%}
 
 {% block banner_slider %}
 <!--Banner Slider-->
  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'app/images/banner/b1.jpeg' %}" class="d-block w-100" alt="..."> 
-    </div>
+
+    {% comment %} <div class="carousel-item">
+      <img src="{% static '/app/images/jewellery/g2.jpg' %}" class="d-block w-100" alt="...">
+    </div> {% endcomment %}
+
     <div class="carousel-item">
       <img src="{% static 'app/images/banner/b2.jpeg' %}" class="d-block w-100" alt="...">
     </div>
@@ -19,7 +34,12 @@
     <div class="carousel-item">
       <img src="{% static 'app/images/banner/b4.jpeg' %}" class="d-block w-100" alt="...">
     </div>
+
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/jewellery/j2.jpeg' %}" class="d-block w-100" alt="..."> 
+    </div>
   </div>
+  
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -37,13 +57,60 @@
 {% block livesale %}
 <br>
 <!-- Live Sale Section -->
-<div class="container">
+<div id="sale" class="container">
   <div class="row bg-danger text-center p-5 text-white border-bottom shadow">
     <h1>SALE IS LIVE NOW</h1>
     <span>5% Instant Discount on Axis Bank Credit and Debit Card</span>
     <small class="fw-lighter">Term and Condition Applied (For details visit Bank's official Website)</small>
   </div>
 </div> 
+
+<br>
+<div id="about" class="container bg-dark text-white">
+  <div class="row text-center p-5 border-bottom shadow" style="width: 100%;">
+      <h1>Products</h1>
+      <small class="fs-5">
+        We are Retailer possessing years of experience in fabricating 
+        authentic hallmarked jewellery including Gold Bangles, Silver
+        Payal, Gold Chain, silver rings, gold necklace that are artistic
+        and elegant in design. We are based in Talala. Our prime agenda
+        is to provide the highest quality of products with the finest purity.
+        If you require any further information, feel free to contact us.
+      </small>
+
+  </div>
+</div>
+
+<div id="about" class="container bg-dark text-white">
+  <div class="row text-center p-5 border-bottom shadow" style="width: 100%;">
+      <h1>About - Us </h1>
+      <small class="fs-5">
+        "Hello! At Shreenathji jewellers , we create beautiful jewelry. Our founder, harsh lodhiya, loves making jewelry. They learned from experts for many years to become really good at it!
+
+        Our jewelry is special because it's made with care. We use the best materials, like shiny gemstones, to make each piece extra lovely. Whether it's a ring for a special moment or a necklace that sparkles, every piece is made with lots of attention to detail.
+        
+        We're a family business, and we've been making jewelry for a long time. Our founder keeps the tradition alive by making unique jewelry that shows off your style and feelings.
+        
+        We really care about our customers. We want everyone who wears our jewelry to feel happy and special. And we make sure everything we do is good for the planet too!
+        
+        Join us in celebrating beautiful jewelry that's made with love and passion!"
+      </small>
+
+  </div>
+</div>
+
+<div id="about" class="container bg-dark text-white">
+  <div class="row text-center p-5 border-bottom shadow" style="width: 100%;">
+      
+      <small class="fs-5">
+        Address : Shreenathji jewellers , Kapad bajar , opp. Jalaram market ,Talala(gir) 
+        Pincode -362150
+      </small>
+
+  </div>
+</div>
+
+
 <!-- End Live Sale Section -->
 {% endblock livesale %}
 

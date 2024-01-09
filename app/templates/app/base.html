@@ -18,6 +18,24 @@
     <!--Custom CSS-->
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
 
+    <style>
+      section.hero {
+        background: url('static/app/images/jewellery/g2.jpg') center/cover no-repeat;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-align: center;
+        padding: 150px 0;
+        height: 100vh; /* Set the height to 100% of the viewport height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    section.hero h2 {
+        margin-bottom: 20px;
+    }
+    </style>
+
 
     <title> Shreenathji | {% block title %} {% endblock title %} </title>
   </head>
@@ -47,7 +65,20 @@
                <li><a class="dropdown-item" href="{% url 'rosegold' %}">RoseGold Collections</a></li>
                {% comment %} <li><a class="dropdown-item" href="#">Laptop</a></li> {% endcomment %}
              </ul>
+
            </li>
+
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="electronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More ..
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+              <li><a class="dropdown-item" href="#about">About-Us </a></li>
+              <li><a class="dropdown-item" href="{% url 'contact_us' %}">Contact-Us </a></li>
+              <li><a class="dropdown-item" href="#sale">Product-sale </a></li>
+              
+              {% comment %} <li><a class="dropdown-item" href="#">Laptop</a></li> {% endcomment %}
+            </ul>
            {% comment %} <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle text-white" href="#" id="fashionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                Fashion
@@ -76,6 +107,7 @@
                 <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
               </ul>
             </li>
+            
             <li class="nav-item mx-2">
               <a href="{% url 'showcart' %}" class="nav-link text-white"><span class="badge bg-danger">{{totalitem}}</span> Cart </a>
             </li>
@@ -86,21 +118,67 @@
             <li class="nav-item mx-2">
              <a href="{% url 'customerregistration' %}" class="nav-link text-white">Registration</a>
             </li>
+
+            <li class="nav-item mx-2">
+              <a href="" class="nav-link text-white">Contact-Us</a>
+             </li>
+
+             <li class="nav-item mx-2">
+              <a href="#about" class="nav-link text-white">About-Us</a>
+             </li>
+
+             <li class="nav-item mx-2">
+              <a href="#sale" class="nav-link text-white"> Offers/Sale</a>
+             </li>
+
             {% endif %}
           </ul>
          </div>
        </div>
      </div>
     </nav>
+    {% block home%}{% endblock home%}
     {% block banner_slider %} {% endblock banner_slider %}
     {% block livesale %} {% endblock livesale %}
     {% block main-content %} {% endblock main-content %}
 
     <!-- Start Footer -->
-    <footer class="container-fluid bg-dark text-center p-2 mt-5">
-        <small class="text-white">Copyright &copy; 2023 || Designed By Harsh || </small>
-        <img src="{% static 'app/images/payment.png' %}" alt="" srcset="" class="img-fluid" height="2px">
-    </footer> <!-- End Footer -->
+   
+    <footer class="container-fluid bg-dark text-center text-white p-3 mt-5">
+      <div class="row">
+          <div class="col-md-6">
+              <small class="d-block">Copyright &copy; 2023 || Designed By Harsh ||</small>
+              <small>Mo. 9558032543 || Email- harshlodhiya9@gmail.com</small>
+          </div>
+          <div class="col-md-6">
+              <hr class="d-md-none">
+              <section class="mb-2">
+                  <!-- Facebook -->
+                  <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;"
+                      href="https://www.facebook.com/share/nvsD46tPDX7NQJvg/" role="button">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+  
+                  <!-- Twitter -->
+  
+                  <!-- Google Map Icon -->
+                  <a class="btn text-white btn-floating m-1" style="background-color: #4285f4;"
+                      href="https://maps.app.goo.gl/U2KYyL9yvSgTdAgSA?g_st=iw" role="button">
+                      <i class="fas fa-map-marker-alt"></i>
+                  </a>
+  
+                  <!-- Instagram -->
+                  <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;"
+                      href="https://www.instagram.com/shreenathji_jewellers_76?igsh=MW41bHphdWJ4Z2Qwaw=="
+                      role="button">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </section>
+          </div>
+      </div>
+  </footer>
+  
+   
 
     
     <!-- Jquery -->

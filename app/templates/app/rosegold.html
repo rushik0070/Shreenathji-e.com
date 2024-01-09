@@ -6,7 +6,7 @@
  <div class="row">
   <div class="col-sm-3">
    <div class="list-group">
-     <a href="{% url 'rosegold' %}" class="list-group-item list-group-item-action" aria-current="true">All Mobile</a>
+     <a href="{% url 'rosegold' %}" class="list-group-item list-group-item-action" aria-current="true">All RoseGold</a>
      {% comment %} <a href="{% url 'sliverdata' 'Redmi'  %}" class="list-group-item list-group-item-action" aria-current="true">-</a>
      <a href="{% url 'sliverdata' 'Samsung'  %}" class="list-group-item list-group-item-action">-</a> {% endcomment %}
      <a href="{% url 'rosegolddata' 'below'  %}" class="list-group-item list-group-item-action">Below 100000</a>
@@ -15,7 +15,7 @@
   </div>
   <div class="col-sm-8">
    <div class="row">
-    {% for product in mobiles %}
+    {% for product in rosegold %}
      <div class="col-sm-4 text-center mb-4">
       <a href="{% url 'product-detail' product.id %}" class="btn">
        <div class="item">
