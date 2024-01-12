@@ -1,0 +1,79 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
+{% block main-content %}
+
+<style>
+    /* Add this CSS to your existing stylesheet or create a new one */
+
+    .about-us-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px; /* Adjust margin as needed */
+        transition: all 0.5s ease; /* Add transition */
+    }
+
+    .about-us-container:hover {
+        transform: scale(1.02); /* Add scale on hover */
+    }
+
+    .about-text {
+        flex: 1; /* Takes up remaining width */
+        padding: 20px; /* Adjust padding as needed */
+        animation: fadeIn 2s; /* Add fade in animation */
+    }
+
+    .about-image {
+        flex: 1; /* Takes up remaining width */
+        padding: 20px; /* Adjust padding as needed */
+        animation: fadeIn 3s; /* Add fade in animation */
+       
+        border-radius: 0 10px 10px 0;
+      
+    }
+
+    /* Optional: Add media queries for responsiveness */
+    @media (max-width: 768px) {
+        .about-us-container {
+            flex-direction: column;
+        }
+
+        .about-text, .about-image {
+            flex: auto; /* Reset flex property for full width */
+            padding: 20px;
+            border-radius: 10px; 
+        }
+    }
+
+    /* Add keyframes for fadeIn animation */
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+</style>
+
+<div class="about-us-container">
+    <div class="about-text">
+        <h2 class="text-center mb-4">About Us</h2>
+        
+        <p class="fs-5">
+            "Hello! At Shreenathji Jewellers, we create beautiful jewelry. Our founder, Harsh Lodhiya, loves making jewelry. They learned from experts for many years to become really good at it!
+
+            Our jewelry is special because it's made with care. We use the best materials, like shiny gemstones, to make each piece extra lovely. Whether it's a ring for a special moment or a necklace that sparkles, every piece is made with lots of attention to detail.
+
+            We're a family business, and we've been making jewelry for a long time. Our founder keeps the tradition alive by making unique jewelry that shows off your style and feelings.
+
+            We really care about our customers. We want everyone who wears our jewelry to feel happy and special. And we make sure everything we do is good for the planet too!
+
+            Join us in celebrating beautiful jewelry that's made with love and passion!"
+        </p>
+       
+    </div>
+    
+    <div class="about-image">
+        <img class="img-fluid" src="{% static 'app/images/jewellery/g2.jpg' %}" alt="About Us Image">
+    </div>
+</div>
+
+{% endblock main-content %}

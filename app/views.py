@@ -288,3 +288,6 @@ def contact_us(request):
         form = ContactForm()
 
     return render(request, 'app/contact_us.html', {'form': form})
+
+def about_us_view(request):
+    return render(request, 'app/about-us.html')

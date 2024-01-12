@@ -47,4 +47,5 @@ urlpatterns = [
 
     path('registration/', views.CustomerRegistrationView.as_view(), name='customerregistration'),
      path('contact-us/', views.contact_us, name='contact_us'),
+     path('about-us/', views.about_us_view, name='about-us'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

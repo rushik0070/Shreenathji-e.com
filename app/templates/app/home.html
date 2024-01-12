@@ -4,7 +4,7 @@
 
 {% block home %}
 
-<br>
+
 <section id="featured" class="hero">
   <div class="container">
       <h2>Discover Timeless Elegance</h2>
@@ -57,7 +57,7 @@
 {% block livesale %}
 <br>
 <!-- Live Sale Section -->
-<div id="sale" class="container">
+<div id="sale" class="container p-3 mt-5">
   <div class="row bg-danger text-center p-5 text-white border-bottom shadow">
     <h1>SALE IS LIVE NOW</h1>
     <span>5% Instant Discount on Axis Bank Credit and Debit Card</span>
@@ -66,7 +66,7 @@
 </div> 
 
 <br>
-<div id="about" class="container bg-dark text-white">
+<div id="about" class="container-fluid bg-dark text-center text-white p-3 mt-5">
   <div class="row text-center p-5 border-bottom shadow" style="width: 100%;">
       <h1>Products</h1>
       <small class="fs-5">
@@ -81,43 +81,28 @@
   </div>
 </div>
 
-<div id="about" class="container bg-dark text-white">
-  <div class="row text-center p-5 border-bottom shadow" style="width: 100%;">
-      <h1>About - Us </h1>
-      <small class="fs-5">
-        "Hello! At Shreenathji jewellers , we create beautiful jewelry. Our founder, harsh lodhiya, loves making jewelry. They learned from experts for many years to become really good at it!
 
-        Our jewelry is special because it's made with care. We use the best materials, like shiny gemstones, to make each piece extra lovely. Whether it's a ring for a special moment or a necklace that sparkles, every piece is made with lots of attention to detail.
-        
-        We're a family business, and we've been making jewelry for a long time. Our founder keeps the tradition alive by making unique jewelry that shows off your style and feelings.
-        
-        We really care about our customers. We want everyone who wears our jewelry to feel happy and special. And we make sure everything we do is good for the planet too!
-        
-        Join us in celebrating beautiful jewelry that's made with love and passion!"
-      </small>
 
-  </div>
-</div>
 
-<div id="about" class="container bg-dark text-white">
-  <div class="row text-center p-5 border-bottom shadow" style="width: 100%;">
-      
-      <small class="fs-5">
-        Address : Shreenathji jewellers , Kapad bajar , opp. Jalaram market ,Talala(gir) 
-        Pincode -362150
-      </small>
-
-  </div>
-</div>
 
 
 <!-- End Live Sale Section -->
 {% endblock livesale %}
 
+<style>
+  h2 {
+    font-family:  sans-serif; /* Replace 'Your Preferred Font' with the desired font */
+    color: #ff6699; /* Change the color as per your preference */
+    font-size: 2em; /* Adjust the font size */
+    font-weight: bold; /* Set the font weight if needed */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+</style>
+
 {% block main-content %}
 <!-- 1st Product Slider -->
 <div class="m-3">
- <h2>Shreenathji Gold Wear</h2>
+ <center><h2>GOLD WEAR</h2><center>
  <!-- Slider 1 -->
  <div class="owl-carousel" id="slider1">
   {% for g in gold %}
@@ -127,44 +112,11 @@
 </div>
 <!-- End 1st Product Slider -->
 
-<!-- Payment Info Section -->
-<div class="container my-5">
- <div class="row">
-  <div class="col-sm-3">
-   <div class="card mb-3">
-     <div class="card-body">
-     <img src="{% static 'app/images/payavail/cc.jpg' %}" alt="" srcset="" class="img-fluid">
-     </div>
-   </div>
-  </div>
-  <div class="col-sm-3">
-   <div class="card mb-3">
-     <div class="card-body">
-      <img src="{% static 'app/images/payavail/upi.jpg' %}" alt="" srcset="" class="img-fluid">
-     </div>
-   </div>
-  </div>
-  <div class="col-sm-3">
-   <div class="card mb-3">
-     <div class="card-body">
-      <img src="{% static 'app/images/payavail/nb.jpg' %}" alt="" srcset="" class="img-fluid">
-     </div>
-   </div>
-  </div>
-  <div class="col-sm-3">
-   <div class="card mb-3">
-     <div class="card-body">
-      <img src="{% static 'app/images/payavail/bj.jpg' %}" alt="" srcset="" class="img-fluid">
-     </div>
-   </div>
-  </div>
- </div>
-</div>
-<!-- End Payment Info Section -->
+
 
 <!-- 2nd Product Slider -->
 <div class="mx-3">
- <h2>Shreenathji sliver Wear</h2>
+ <center><h2> SILVER WEAR</h2></center>
  <!-- Slider 2 -->
  <div class="owl-carousel" id="slider2">
   {% for s in sliver %}
@@ -176,7 +128,7 @@
 
 <!-- 3rd Product Slider -->
 <div class="mx-3">
- <h2>Shreenathji rosegold Were</h2>
+ <center><h2> ROSEGOLD WEAR</h2></center>
  <!-- Slider 3 -->
  <div class="owl-carousel" id="slider3">
   {% for r in rosegold %}
@@ -185,5 +137,109 @@
  </div>
 </div>
 <!-- End 2nd Product Slider -->
+
+<!-- Payment Info Section -->
+<div class="container my-5">
+  <div class="row">
+   <div class="col-sm-3">
+    <div class="card mb-3">
+      <div class="card-body">
+      <img src="{% static 'app/images/payavail/cc.jpg' %}" alt="" srcset="" class="img-fluid">
+      </div>
+    </div>
+   </div>
+   <div class="col-sm-3">
+    <div class="card mb-3">
+      <div class="card-body">
+       <img src="{% static 'app/images/payavail/upi.jpg' %}" alt="" srcset="" class="img-fluid">
+      </div>
+    </div>
+   </div>
+   <div class="col-sm-3">
+    <div class="card mb-3">
+      <div class="card-body">
+       <img src="{% static 'app/images/payavail/nb.jpg' %}" alt="" srcset="" class="img-fluid">
+      </div>
+    </div>
+   </div>
+   <div class="col-sm-3">
+    <div class="card mb-3">
+      <div class="card-body">
+       <img src="{% static 'app/images/payavail/bj.jpg' %}" alt="" srcset="" class="img-fluid">
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <!-- End Payment Info Section -->
+
+ <style>
+  .bord {
+    transition: transform 0.3s ease-in-out;
+  
+  }
+
+  .bord:hover {
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+  }
+</style>
+
+
+ <div id="about" class="container-fluid bg-dark text-white mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <footer class="container-fluid bg-dark text-center text-white p-3 mt-5">
+        <small class="d-block">Copyright &copy; 2023 || Designed By Harsh ||</small>
+        <br>
+        <small>Mo. 9558032543 || Email- harshlodhiya9@gmail.com</small>
+        <br>
+        <hr>
+
+        <hr class="d-md-none">
+        <section class="mb-2">
+          <!-- Facebook -->
+          <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;"
+            href="https://www.facebook.com/share/nvsD46tPDX7NQJvg/" role="button">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <!-- Google Map Icon -->
+          <a class="btn text-white btn-floating m-1" style="background-color: #4285f4;"
+            href="https://maps.app.goo.gl/U2KYyL9yvSgTdAgSA?g_st=iw" role="button">
+            <i class="fas fa-map-marker-alt"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;"
+            href="https://www.instagram.com/shreenathji_jewellers_76?igsh=MW41bHphdWJ4Z2Qwaw=="
+            role="button">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <hr>
+          <br>
+
+          <img src="{% static 'app/images/logo/logo.jpeg' %}" class="d-block w-25 h-auto mx-auto bord" alt="Logo">
+<!-- Adjust the w-25 class to set the width as needed -->
+
+
+        </section>
+      </footer>
+    </div>
+    <div class="col-md-6 text-center p-5 border-bottom shadow">
+      <h1 class="display-4">Our Location</h1>
+      
+        <a href="https://maps.app.goo.gl/U2KYyL9yvSgTdAgSA?g_st=iw" target="_blank">
+          <img src="{% static 'app/images/logo/map.jpg' %}" alt="Map Image" class="img-fluid mt-4" style="max-height: 350px;">
+          <!-- Adjust the max-height style to make the image smaller -->
+        </a>
+      </div>
+  
+    </div>
+  </div>
+</div>
+
+
+
+
 {% endblock main-content %}
 

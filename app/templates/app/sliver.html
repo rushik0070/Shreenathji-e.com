@@ -1,12 +1,12 @@
 {% extends 'app/base.html' %}
 {% load static %}
-{% block title %}Sliver {% endblock title %}
+{% block title %}Silver {% endblock title %}
 {% block main-content %}
 <div class="container my-5">
  <div class="row">
   <div class="col-sm-3">
    <div class="list-group">
-     <a href="{% url 'sliver' %}" class="list-group-item list-group-item-action" aria-current="true">All Sliver</a>
+     <a href="{% url 'sliver' %}" class="list-group-item list-group-item-action" aria-current="true">All Silver</a>
      {% comment %} <a href="{% url 'sliverdata' 'Redmi'  %}" class="list-group-item list-group-item-action" aria-current="true">-</a>
      <a href="{% url 'sliverdata' 'Samsung'  %}" class="list-group-item list-group-item-action">-</a> {% endcomment %}
      <a href="{% url 'sliverdata' 'below'  %}" class="list-group-item list-group-item-action">Below 100000</a>
